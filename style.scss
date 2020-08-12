@@ -1,0 +1,353 @@
+/*Global*/ 
+$color-light: #c8d6e5;
+$color-main: #1dd1a1;
+$color-og: #10ac84;
+$font-text: 'Open Sans', sans-serif;
+$font-header: 'Josefin Sans', sans-serif;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+p, h1, h2 {
+    margin : 0;
+}
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 14px;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    color: $color-og
+}
+.section-title {
+    text-align: center;
+    position: relative;
+    font-size: 38px;
+    margin: 0 0 60px 0;
+    padding: 20px;
+    color: $color-main
+}
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: 15px;
+    left: 50%;
+    width: 100px;
+    height: 5px;
+    
+    transform: translateX(-50%);
+    background: black;
+}
+
+/*splsh*/
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/69457/aso-komezuka-sea-of-clouds-cloud-69457.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.splash i {
+    font-size: 38px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 80%;
+    background: $color-main
+}
+
+/*pages*/
+.page-title {
+    font-size: 30px;
+    margin: 48px 0 0 0;
+    position: relative;
+    color: $color-og
+}
+.page-title:after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 100px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: $color-light
+}
+.page-subtitle {
+    font-size: 18px;
+    margin: 48px 0 0 0;
+    color: $color-og
+}
+/* Intro */
+.intro {
+    padding: 40px;
+    background: $color-main;
+    
+}
+.intro h2 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0;
+    font-size: 24px;
+    border-top: 5px solid $color-og;
+    border-bottom: 5px solid $color-og;
+    color: $color-light;
+    
+}
+/* About*/
+.about {
+    background: $color-light    
+}
+.about h2 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0;
+    font-size: 24px; 
+}
+    
+
+/* Skill */
+.skill {
+    position: relative;
+}
+.skill-image {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.skill-image img {
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    object-fit : cover;
+}
+.skill-right .skill-image {
+    right: 0;
+}
+.skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+.skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+.skill-image:hover img {
+    transform: scale(1.5);
+}
+/* Gallery */
+.clearfix::before,
+.clearfix::after {
+	content:"";
+	display: table;
+	clear: both;
+}
+.gallery-title {
+    text-align: center;
+    position: relative;
+    font-size: 38px;
+    margin: 0 0 60px 0;
+    padding: 20px;
+    color: $color-og
+}
+.gallery-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 50px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: black;
+}
+
+#gallery .photo {
+    position: relative;
+    float: left;
+    min-height: 1px;
+	text-align: center;
+     width: 25%;
+     height: 200px;
+}
+
+#gallery .photo img {
+    float: left;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#gallery .photo .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+#gallery .photo:hover  {
+    transform: scale(1.5);
+}
+
+#gallery .photo .layer  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Kontakt */
+.form {
+    margin:3rem auto;
+    font-family:sans-serif;
+    max-width:40rem;
+}
+.form .form-row {
+    margin-bottom:1rem;
+}
+.form .form-row:last-child {
+    margin-bottom: 0;
+}
+.form input[type=text],
+.form input[type=email],
+.form textarea,
+.form .checkbox-cnt .state {
+    box-shadow:inset 0 1px 5px rgba(0,0,0,0.07);
+}
+.form input[type=text],
+.form input[type=email],
+.form textarea {
+    border-radius:0.2rem;
+    font-family:sans-serif;
+    padding:0.8rem;
+    border:1px solid #aaa;
+    display: block;
+    width:100%;
+    color:#666;
+}
+.form input[type=text]:focus,
+.form input[type=email]:focus,
+.form textarea:focus {
+    border-color:#9DC9F5;
+    box-shadow:inset 0 0 0 1px #9DC9F5, inset 0 1px 5px rgba(0,0,0,0.07);
+    outline:none;
+}
+.form textarea {
+    height:10rem;
+}
+.form label {
+    font-weight:bold;
+    display: block;
+    font-size:0.9rem;
+    margin-bottom:0.5rem;
+}
+.form .submit-btn {
+    font-family: sans-serif;
+    padding:1rem 2rem;
+    background: #70B81B;
+    border:0;
+    border-radius:0.2rem;
+    color:#fff;
+    font-size:1.1rem;
+    font-weight: bold;
+    transition: 0.3s background-color;
+}
+
+/* checkbox */
+.form .submit-btn:hover {
+    background: #7EC927;
+}
+.form .checkbox-cnt {
+    padding-left:3rem;
+    position: relative;
+    font-weight: normal;
+    font-size:0.85rem;
+    line-height: 1.1rem;
+    color:#444;
+    cursor: pointer;
+}
+.form .checkbox-cnt .state {
+    width:2rem;
+    height: 2rem;
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    border:1px solid #aaa;
+    border-radius:0.2rem;
+}
+.form .checkbox-cnt .state:before {
+    width:1rem;
+    height: 1rem;
+    border-radius:0.2rem;
+    background: #70B81B;
+    display: block;
+    position: absolute;
+    left:50%;
+    top:50%;
+    content:'';
+    transform:translate(-50%, -50%) scale(1);
+    opacity:0;
+}
+.form .checkbox-cnt input:checked ~ .state:before {
+    animation: checkboxShowAnim 0.5s 1;
+    opacity: 1;
+}
+.form .checkbox-cnt input {
+    position:absolute;
+    top:0; left:0;
+    width:2rem;
+    height: 2rem;
+    z-index: 2;
+    cursor:pointer;
+    padding:0;
+    margin:0;
+    opacity: 0;
+}
+@keyframes checkboxShowAnim {
+    0%  { border-radius:50%; transform:translate(-50%, -50%) scale(0.2); }
+    50% { transform:translate(-50%, -50%) scale(1.2); }
+    100% { transform:translate(-50%, -50%) scale(1); }
+}
+
+/* walidacja */
+.form input[type=text].error,
+.form input[type=email].error,
+.form textarea.error,
+.form .checkbox-cnt input.error ~ .state {
+    border-color: $color-og;
+}
+.field-error {
+    color: $color-og;
+    padding:0.5rem 0;
+    font-size:0.8rem;
+}
+
+@media screen and (max-width:500px) {
+    .form .submit-btn {
+        display: block;
+        width: 100%;
+    }
+}
+/* footer*/
+.page-footer {
+        background:#242424;
+}
